@@ -3,9 +3,8 @@
         <url>$bioviz</url>
         <param type="data" name="bedgraph_file_for_name" viewable="False"/>
         <param type="template" name="niceName" viewable="False" strip="True">
-            #import re
             #set nm=$bedgraph_file_for_name.name
-            ${re.sub('\W',"_",nm)}
+            ${nm}
         </param>
         <param type="data" name="bedgraph_file" url="${niceName}.bed.bedgraph" />
         <param type="template" name="bioviz" strip="True" >
